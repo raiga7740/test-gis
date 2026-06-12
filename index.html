@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Rute Perjalanan</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Map</a>
+
+      <div class="nav-menu">
+        <a href="#fitur">Fitur</a>
+        <a href="#cara-pakai">Cara Pakai</a>
+        <a href="#demo">Demo</a>
+      </div>
+
+      <a href="#demo" class="nav-cta">Coba Peta</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="label">Peta Rute Perjalanan</span>
+
+        <h1>Hitung jarak dan estimasi waktu perjalanan.</h1>
+
+        <p>
+          Pilih dua titik pada peta untuk melihat jarak, rute perjalanan,
+          dan perkiraan waktu tempuh secara otomatis.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">Gunakan Sekarang</a>
+          <a href="#cara-pakai" class="btn btn-outline">Pelajari Cara Pakai</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="fitur">
+    <div class="section-header">
+      <span>Fitur</span>
+      <h2>Sederhana untuk digunakan</h2>
+      <p>
+        Website ini membantu menghitung jarak antara dua lokasi
+        menggunakan peta interaktif.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Pilih titik langsung</h3>
+        <p>Klik pada peta untuk menentukan titik awal dan titik tujuan.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Hitung rute</h3>
+        <p>Rute perjalanan akan dihitung otomatis setelah dua titik dipilih.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Estimasi waktu</h3>
+        <p>Menampilkan perkiraan waktu tempuh berdasarkan rute perjalanan.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Marker fleksibel</h3>
+        <p>Marker dapat digeser untuk mengubah posisi dan menghitung ulang rute.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section" id="cara-pakai">
+    <div class="section-header">
+      <span>Cara Pakai</span>
+      <h2>Gunakan dalam tiga langkah</h2>
+      <p>
+        Tidak perlu input alamat manual. Cukup klik lokasi pada peta.
+      </p>
+    </div>
+
+    <div class="step-grid">
+      <div class="step-card">
+        <span>01</span>
+        <h3>Pilih titik awal</h3>
+        <p>Klik lokasi pertama pada peta sebagai titik awal.</p>
+      </div>
+
+      <div class="step-card">
+        <span>02</span>
+        <h3>Pilih titik tujuan</h3>
+        <p>Klik lokasi kedua sebagai tujuan perjalanan.</p>
+      </div>
+
+      <div class="step-card">
+        <span>03</span>
+        <h3>Lihat hasil</h3>
+        <p>Jarak, waktu, dan rute akan muncul secara otomatis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section" id="demo">
+    <div class="section-header">
+      <span>Demo</span>
+      <h2>Coba peta interaktif</h2>
+      <p>
+        Klik dua titik pada peta untuk mulai menghitung jarak.
+      </p>
+    </div>
+
+    <div class="map-layout">
+      <div class="map-card">
+        <div id="map"></div>
+      </div>
+
+      <aside class="panel">
+        <div class="result-card">
+          <span>Hasil Perhitungan</span>
+
+          <div id="resultContent">
+            <p class="status">Klik dua titik di peta</p>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button class="panel-btn secondary" id="resetBtn">Hapus</button>
+          <button class="panel-btn primary" id="exampleBtn">Contoh</button>
+        </div>
+
+        <div class="points-card">
+          <h3>Daftar Titik</h3>
+
+          <div id="pointsList">
+            <div class="empty-point">
+              Belum ada titik yang dipilih.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          Marker dapat digeser untuk mengubah posisi titik.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Map | &copy; Map 2026</p>
+  </footer>
+
+</body>
+</html>
